@@ -1,0 +1,30 @@
+.cameraContainer{
+    position: relative;
+}
+
+.cameraContainer .cameraBtn {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border: 1px solid blue;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%
+}
+.container .cameraBtn:hover {
+    background-color: salmon;
+}
+
+img {
+    filter: grayscale(100%);
+}
+.snapshot{
+    float: left;
+}
+
