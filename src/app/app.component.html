@@ -15,13 +15,12 @@
         style="max-height: 33vh" [style.display]="cropperReady ? null : 'none'"></image-cropper>
     </div>
     <div>
-      <h2>Cropped Frame</h2>
-      <img class="crpImg" id="img" [src]="croppedImage" />
+      <h2>Cropped Frame</h2>      
+      <img class="crpImg" id="img" [src]="croppedImage" />             
       <button type="button" class="btn btn-primary" (click)="performOCR()">OCR</button>
       <h3>OCR Results</h3>
       <div id="ocr_results"> </div>
     </div>
 
   </div>
-
 </div>
