@@ -80,23 +80,13 @@ export class AppComponent {
     // 1st Step, convert to GreyScale
     for (let i = 0; i < pixels.length; i += 4) {
       const avg = (pixels[i] + pixels[i + 1] + pixels[i + 2]) / 3;
-      pixels[i] = avg; // red
-      pixels[i + 1] = avg; // green
-      pixels[i + 2] = avg; // blue
+      pixels[i] = pixels[i + 1] = pixels[i + 2] = avg;
     }
 
     // 2nd Step, convert to Binary Black & White
     for (let i = 0, n = pixels.length; i < n; i += 4) {
-      const gray = 0.2126 * pixels[i] + 0.7152 * pixels[i + 1] + 0.0722 * pixels[i + 2];
-      if (gray > 128) {
-        pixels[i] = 255;        // red
-        pixels[i + 1] = 255;        // green
-        pixels[i + 2] = 255;        // blue
-      } else {
-        pixels[i] = 0;        // red
-        pixels[i + 1] = 0;        // green
-        pixels[i + 2] = 0;        // blue
-      }
+      const value = (0.2126 * pixels[i] + 0.7152 * pixels[i + 1] + 0.0722 * pixels[i + 2] >= 128) ? 255 : 0;
+      pixels[i] = pixels[i + 1] = pixels[i + 2] = value;
     }
     ctx.putImageData(imgD, 0, 0);
     console.log('Canvas base 64', canvas.toDataURL());
@@ -133,4 +123,5 @@ export class AppComponent {
       pixels[i] = hist[~~pixels[i]] * norm;
     }
   }
+
 }
