@@ -100,28 +100,5 @@ export class AppComponent {
 
   }
 
-  equalizeHistogram(pixels) {
-    const srcLength = pixels.length;
-
-    // Compute histogram and histogram sum:
-    const hist = new Float32Array(256);
-    let sum = 0;
-    for (let i = 0; i < srcLength; ++i) {
-      ++hist[~~pixels[i]];
-      ++sum;
-    }
-
-    // Compute integral histogram:
-    let prev = hist[0];
-    for (let i = 1; i < 256; ++i) {
-      prev = hist[i] += prev;
-    }
-
-    // Equalize image:
-    const norm = 255 / sum;
-    for (let i = 0; i < srcLength; ++i) {
-      pixels[i] = hist[~~pixels[i]] * norm;
-    }
-  }
 
 }
