@@ -1,7 +1,10 @@
 .cameraContainer{
     position: relative;
+    display: inline-flex
 }
-
+h1{
+    align-self: center
+}
 .cameraContainer .cameraBtn {
     position: absolute;
     top: 90%;
@@ -15,7 +18,7 @@
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 50%
+    border-radius: 50%;
 }
 .container .cameraBtn:hover {
     background-color: salmon;
@@ -24,7 +27,22 @@
 img {
     /* filter: grayscale(100%); */
 }
+.imgContainer{
+    display: inline-flex;
+    align-content: center
+}
+.btn btn-primary{
+    display: inline;
+    padding: 2px;
+}
 .snapshot{
     float: left;
+    border: 1px;
+    padding: 2px
+}
+
+.croppedShot{
+    border: 1px;
+    padding: 5px
 }
 

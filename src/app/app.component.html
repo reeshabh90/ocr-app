@@ -1,4 +1,4 @@
-<div class="container" style="text-align:center">
+<div class="container" style=" text-align: center;align-content: center">
   <h1>{{title}}</h1>
 
   <div class="cameraContainer">
@@ -7,14 +7,14 @@
     <button class="cameraBtn" (click)="triggerSnapshot();"></button>
   </div>
 
-  <div *ngIf="webcamImage">
+  <div class="imgContainer" *ngIf="webcamImage">
     <div class="snapshot">
-      <h2>Select Area</h2>
+      <h2>Nice Shot!</h2>
       <image-cropper [imageBase64]="webcamImage.imageAsDataUrl" [maintainAspectRatio]="true" [aspectRatio]="4 / 3" [resizeToWidth]="128"
         format="jpeg" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" (loadImageFailed)="loadImageFailed()"
         style="max-height: 33vh" [style.display]="cropperReady ? null : 'none'"></image-cropper>
     </div>
-    <div>
+    <div class="croppedShot">
       <h2>Cropped Frame</h2>      
       <img class="crpImg" id="img" [src]="croppedImage" />             
       <button type="button" class="btn btn-primary" (click)="performOCR()">OCR</button>
