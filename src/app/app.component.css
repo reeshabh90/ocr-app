@@ -1,5 +1,6 @@
 .cameraContainer{
     position: relative;
+    padding-top: 1%
 }
 
 .cameraContainer .cameraBtn {
@@ -26,5 +27,8 @@ img {
 }
 .snapshot{
     float: left;
+    height: 300px;
+    margin-left: 20%;
+    margin-bottom: 1%
 }
 

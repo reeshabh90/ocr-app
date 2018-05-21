@@ -1,14 +1,40 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>OcrApp</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-  <app-root></app-root>
+  <div class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">      
+        <a class="navbar-brand" href="http://www.lyfas.com">
+          <img src="assets/lyfas.png" />
+        </a>
+        <span class="vert-line">
+          <span class="vert-line-inner"></span>
+        </span>
+        <a class="navbar-brand AppHeader" href="/Home/Index">
+          OCR App
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+
+      </div>
+    </div>
+  </div>
+  <div class="container body-content">
+    <app-root></app-root>
+    <footer>
+      <p>&copy;
+        <script>document.write(new Date().getFullYear())</script> Acculi Labs</p>
+    </footer>
+  </div>
 </body>
+
 </html>
