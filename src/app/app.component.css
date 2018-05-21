@@ -1,8 +1,14 @@
 .cameraContainer{
     position: relative;
+<<<<<<< HEAD
     padding-top: 1%
+=======
+    display: inline-flex
 }
-
+h1{
+    align-self: center
+>>>>>>> 3f9377c761c6e55353ee70579bc5ff7d600ad35f
+}
 .cameraContainer .cameraBtn {
     position: absolute;
     top: 90%;
@@ -16,7 +22,7 @@
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 50%
+    border-radius: 50%;
 }
 .container .cameraBtn:hover {
     background-color: salmon;
@@ -25,10 +31,28 @@
 img {
     /* filter: grayscale(100%); */
 }
+.imgContainer{
+    display: inline-flex;
+    align-content: center
+}
+.btn btn-primary{
+    display: inline;
+    padding: 2px;
+}
 .snapshot{
     float: left;
+<<<<<<< HEAD
     height: 300px;
     margin-left: 20%;
     margin-bottom: 1%
+=======
+    border: 1px;
+    padding: 2px
+}
+
+.croppedShot{
+    border: 1px;
+    padding: 5px
+>>>>>>> 3f9377c761c6e55353ee70579bc5ff7d600ad35f
 }
 

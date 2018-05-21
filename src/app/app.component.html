@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <div style="text-align:center">
+=======
+<div class="container" style=" text-align: center;align-content: center">
+  <h1>{{title}}</h1>
+>>>>>>> 3f9377c761c6e55353ee70579bc5ff7d600ad35f
 
   <div class="cameraContainer">
     <webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam"></webcam>
@@ -6,9 +11,9 @@
     <button class="cameraBtn" (click)="triggerSnapshot();"></button>
   </div>
 
-  <div *ngIf="webcamImage">
+  <div class="imgContainer" *ngIf="webcamImage">
     <div class="snapshot">
-      <h2>Select Area</h2>
+      <h2>Nice Shot!</h2>
       <image-cropper [imageBase64]="webcamImage.imageAsDataUrl" [maintainAspectRatio]="true" [aspectRatio]="4 / 3" [resizeToWidth]="128"
         format="jpeg" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" (loadImageFailed)="loadImageFailed()"
         style="height: 50%" [style.display]="cropperReady ? null : 'none'"></image-cropper>

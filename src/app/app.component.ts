@@ -68,7 +68,7 @@ export class AppComponent {
       }
 
       ctx.putImageData(imgD, 0, 0);
-      // self.convertToBW(image, canvas);
+      self.convertToBW(image, canvas);
       self.croppedImage = canvas.toDataURL();
     };
     image.id = 'tempImg';
