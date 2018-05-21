@@ -1,13 +1,6 @@
 .cameraContainer{
     position: relative;
-<<<<<<< HEAD
     padding-top: 1%
-=======
-    display: inline-flex
-}
-h1{
-    align-self: center
->>>>>>> 3f9377c761c6e55353ee70579bc5ff7d600ad35f
 }
 .cameraContainer .cameraBtn {
     position: absolute;
@@ -33,7 +26,7 @@ img {
 }
 .imgContainer{
     display: inline-flex;
-    align-content: center
+    align-content: center;    
 }
 .btn btn-primary{
     display: inline;
@@ -41,18 +34,9 @@ img {
 }
 .snapshot{
     float: left;
-<<<<<<< HEAD
-    height: 300px;
-    margin-left: 20%;
+    width: 300px;
+    height: 400px;
+    margin-left: 10%;
     margin-bottom: 1%
-=======
-    border: 1px;
-    padding: 2px
-}
-
-.croppedShot{
-    border: 1px;
-    padding: 5px
->>>>>>> 3f9377c761c6e55353ee70579bc5ff7d600ad35f
 }
 
